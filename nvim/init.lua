@@ -12,3 +12,6 @@ vim.wo.cursorline = true
 
 -- make NeoVim look like Vi-IMproved
 vim.cmd('colorscheme vim')
+
+-- disable text wrap
+vim.cmd('set nowrap')
