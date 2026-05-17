@@ -15,3 +15,5 @@ vim.cmd('colorscheme vim')
 
 -- disable text wrap
 vim.cmd('set nowrap')
+
+
