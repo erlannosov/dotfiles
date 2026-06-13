@@ -1,4 +1,10 @@
+-- =============================
 -- init.lua (minimal config btw)
+-- =============================
+
+-- ================
+-- GENERAL SETTINGS
+-- ================
 
 -- theme & transparency 
 vim.cmd.colorscheme("unokai")
@@ -70,3 +76,10 @@ vim.opt.mouse = "a"			-- enable mouse pointer
 vim.opt.clipboard:append("unnamedplus")	-- use system clipboard
 vim.opt.modifiable = true		-- allow buffer modifications
 vim.opt.encoding = "UTF-8"		-- set encoding 
+
+
+-- ===========
+-- KEYBINDINGS
+-- ===========
+
+-- no keybindings btw
