@@ -1,4 +1,5 @@
-# Dotfiles
-This repository includes config files for the following:
-- NeoVim
-- Fastfetch
+### Dotfiles
+This repository includes the following:
+- Neovim config 
+- Fastfetch config
+- Wallpapers
