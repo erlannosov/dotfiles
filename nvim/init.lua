@@ -69,10 +69,10 @@ vim.opt.hidden = true			-- allow hidden buffers
 vim.opt.errorbells = false		-- no error bells 
 vim.opt.backspace = "indent,eol,start"	-- better backspace behaviour 
 vim.opt.autochdir = false		-- don't autochange directory 
-vim.opt.iskeyword:append("-")		-- treat dash as a part of word
+vim.opt.iskeyword:append("-")	-- treat dash as a part of word
 vim.opt.path:append("**")		-- include subdirectories while searching for a file 
-vim.opt.selection = "exclusive"		-- selection behaviour 
-vim.opt.mouse = "a"			-- enable mouse pointer 
+vim.opt.selection = "exclusive"	-- selection behaviour 
+vim.opt.mouse = "a"			    -- enable mouse pointer 
 vim.opt.clipboard:append("unnamedplus")	-- use system clipboard
 vim.opt.modifiable = true		-- allow buffer modifications
 vim.opt.encoding = "UTF-8"		-- set encoding 
@@ -82,4 +82,5 @@ vim.opt.encoding = "UTF-8"		-- set encoding
 -- KEYBINDINGS
 -- ===========
 
--- no keybindings btw
+-- no keybindings yet, but I will add some later. 
+-- for now, I'm just using the default keybindings and it's working fine for me.
