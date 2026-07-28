@@ -5,3 +5,4 @@ Dotfiles
 - Fastfetch 
 - Profile pictures 
 - Fonts
+- Neomutt 
