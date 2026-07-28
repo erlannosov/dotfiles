@@ -1,0 +1,64 @@
+# ---- General Settings ----
+set send_charset="us-ascii:utf-8"
+
+# ---- Identity ----
+set realname = "<your_full_name>"
+set from = "your_email"
+set envelope_from = yes
+set use_from = yes
+
+# ---- IMAP Settings ----
+set folder = "imaps://imap.gmail.com:993/"
+set imap_user = "your_email"
+set imap_pass = "`gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.mbsync-pw.gpg`"
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set spoolfile = "+[Gmail]/All Mail"
+set record="+[Gmail]/Sent Mail"
+set trash="+[Gmail]/Trash"
+set postponed="+[Gmail]/Drafts"
+
+mailboxes =INBOX ="[Gmail]/Sent Mail" ="[Gmail]/Trash" ="[Gmail]/Drafts" ="[Gmail]/All Mail"
+
+# ---- No local caching of headers or messages ----
+unset header_cache
+unset message_cachedir
+
+# ---- Sane mail behavior ----
+set mail_check = 60
+set timeout = 15
+set editor = "nvim" # you can add your own editor 
+set edit_headers = yes
+set sig_dashes = no
+set sort = threads
+set sort_aux = last-date-received
+
+# ---- Sending mail via msmtp ----
+set sendmail = "/usr/bin/msmtp"
+
+# ---- Color ----
+# color0  = black
+# color1  = red
+# color2  = green
+# color3  = yellow
+# color4  = blue
+# color5  = magenta
+# color6  = cyan
+# color7  = white
+# color8  = brightblack (~gray)
+# color9  = brightred
+# color10 = brightgreen
+# color11 = brightyellow
+# color12 = brightblue
+# color13 = brightmagenta
+# color14 = brightcyan
+# color15 = brightwhite
+
+# example usage : color index_date <text_color> <backgroung_color>
+
+color index_date color15 color0		# date color
+color index_subject color2 color0	# subject 
+color index_author color4 color0	# From/sender address
+color index_number color3 color0	# Number/size column
+color index_flags color1 color0		# Flags (flagged, new, deleted etc.)
