@@ -2,7 +2,7 @@
 set send_charset="us-ascii:utf-8"
 
 # ---- Identity ----
-set realname = "<your_full_name>"
+set realname = "your_full_name"
 set from = "your_email"
 set envelope_from = yes
 set use_from = yes
