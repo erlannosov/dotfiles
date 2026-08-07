@@ -28,11 +28,13 @@ unset message_cachedir
 # ---- Sane mail behavior ----
 set mail_check = 60
 set timeout = 15
-set editor = "nvim" # you can add your own editor 
+set editor = "nvim"
 set edit_headers = yes
 set sig_dashes = no
-set sort = threads
-set sort_aux = last-date-received
+set sort = date
+set use_threads = yes
+set sort_aux = date
+folder-hook . 'push <last-entry>'  # opens up at the latest msg 
 
 # ---- Sending mail via msmtp ----
 set sendmail = "/usr/bin/msmtp"
