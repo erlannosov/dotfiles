@@ -256,4 +256,29 @@ do
 		},
 	})
 
+	--[[ gitsigns ]]
+	
+	vim.pack.add({
+		{ src = 'https://github.com/lewis6991/gitsigns.nvim'}
+	})
+	require('gitsigns').setup {
+		signs = {
+			add = { text = '+' }, ---@diagnostic disable-line: missing-fields
+			change = { text = '~' }, ---@diagnostic disable-line: missing-fields
+			delete = { text = '_' }, ---@diagnostic disable-line: missing-fields
+			topdelete = { text = '‾' }, ---@diagnostic disable-line: missing-fields
+			changedelete = { text = '~' }, ---@diagnostic disable-line: missing-fields
+		},
+	}
+
+	--[[ mini.nvim ]] -- gonna use the status bar if thats good enough 
+	
+	vim.pack.add({
+		{ src = 'https://github.com/nvim-mini/mini.nvim'}
+	})
+
+	local statusline = require 'mini.statusline'
+	statusline.setup { use_icons = vim.g.have_nerd_font }
+	statusline.section_location = function() return '%2l:%-2v' end
+
 end
