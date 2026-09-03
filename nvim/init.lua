@@ -25,7 +25,7 @@ vim.opt.hlsearch = true					-- highlight search matches
 vim.opt.incsearch = true				-- show matches as you type 
 
 vim.opt.signcolumn = "yes"				-- sign column 
-vim.opt.colorcolumn = "100"				-- show a column at 100 position character  
+vim.opt.colorcolumn = "80"				-- show a column at 80 position character  
 vim.opt.showmatch = true				-- highlight the matching brackets
 vim.opt.cmdheight = 1					-- single line cmd line 
 vim.opt.autocomplete = false
@@ -63,8 +63,7 @@ vim.opt.clipboard:append("unnamedplus")			-- use system clipboard
 vim.opt.modifiable = true				-- allow buffer modification 
 vim.opt.encoding = "UTF-8"				-- set encoding 
 
-vim.opt.guicursor =
-	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175" -- cursor blinking and settings
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver100,r-cr:hor20,o:hor50,a:blinkwait500-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175" -- cursor blinking and settings
 
 							-- folding: requires treesitter available at runtime; safe fall bck if not 
 vim.opt.foldmethod = "expr"				-- use expression for folding 
@@ -83,9 +82,8 @@ vim.opt.maxmempattern = 20000				-- increase max memory
 
 vim.g.mapleader = ' '					-- set <space> as the local leader 
 vim.g.maplocalleader = ' '				-- set <space> as the map local leader 
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle file explorer' }) -- file explorer : Neotree
 
--- file explorer
-vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle file explorer' })
 ----------------------------------------------------------------------------------------------------
 -- plugin manager (vim.pack)
 ----------------------------------------------------------------------------------------------------
@@ -174,6 +172,8 @@ do
 	})
 	vim.lsp.enable({
 		'clangd',
+		'python',
+		'arduino',
 		'html',
 		'cssls',
 	})    -- enables the pre-defined configs by name
@@ -277,6 +277,7 @@ do
 		{ src = 'https://github.com/nvim-mini/mini.nvim'}
 	})
 
+	-- a good enough statusline for nvim (looks minimal btw)
 	local statusline = require 'mini.statusline'
 	statusline.setup { use_icons = vim.g.have_nerd_font }
 	statusline.section_location = function() return '%2l:%-2v' end
